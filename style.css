@@ -1,0 +1,51 @@
+css
+Edit
+Full Screen
+Copy code
+.container {
+  position: relative;
+  width: 400px; /* increase the width to 400px */
+  height: 400px; /* increase the height to 400px */
+  overflow: hidden;
+  left: -20px; /* move the container 20px to the left */
+}
+
+.square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000; /* starting color: red */
+  animation: moveAndChangeColor 4s infinite;
+}
+
+@keyframes moveAndChangeColor {
+  0% {
+    left: 20px; /* move the square 20px to the right */
+    top: 0;
+    background-color: #ff0000; /* starting color: red */
+  }
+  25% {
+    left: 370px; /* move the square 370px to the right */
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #00ff00; /* ending color: green */
+  }
+  50% {
+    left: 370px; /* move the square 370px to the right */
+    top: 350px;
+    transform: rotate(180deg);
+    background-color: #0000ff; /* new color: blue */
+  }
+  75% {
+    left: 20px; /* move the square 20px to the right */
+    top: 350px;
+    transform: rotate(270deg);
+    background-color: #ffff00; /* new color: yellow */
+  }
+  100% {
+    left: 20px; /* move the square 20px to the right */
+    top: 0;
+    transform: rotate(360deg);
+    background-color: #ff0000; /* starting color: red */
+  }
+}
